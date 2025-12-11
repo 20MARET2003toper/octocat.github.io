@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About - Kristoper Zamago</title>
+
+<!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- AOS Animation -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<style>
+body { animation: fadeIn 1s ease-in-out; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; }}
+</style>
+
+</head>
+<body class="bg-gradient-to-b from-green-900 to-green-200 min-h-screen text-white">
+
+<!-- ===================== NAVBAR ===================== -->
+<nav class="w-full fixed top-0 z-50 bg-white/80 backdrop-blur shadow-md">
+  <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4 text-green-900 font-semibold">
+
+    <h1 class="text-xl font-bold">Kristoper<span class="text-green-600">Zamago</span></h1>
+
+    <ul class="hidden md:flex space-x-8">
+      <li><a href="Index.html" class="hover:text-green-700">Home</a></li>
+      <li><a href="About.html" class="underline text-green-800 font-bold">About</a></li>
+      <li><a href="Gallery.html" class="hover:text-green-700">Gallery</a></li>
+      <li><a href="Calculator.html" class="hover:text-green-700">Calculator</a></li>
+      <li><a href="Registration.html" class="hover:text-green-700">Registration</a></li>
+      <li><a href="Contact.html" class="hover:text-green-700">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ======= HAMBURGER MENU RESPONSIVE ======= -->
+<div class="md:hidden fixed top-4 right-4 z-50">
+<button id="menuToggle" class="text-3xl px-3 py-2 bg-green-700 text-white rounded-lg shadow-lg active:scale-95 transition-all">☰</button>
+</div>
+
+<div id="mobileMenu" class="hidden flex-col items-center space-y-5 bg-white/95 text-green-900 font-semibold py-6 w-full fixed top-16 left-0 shadow-lg backdrop-blur-md md:hidden">
+  <a href="Home.html" class="hover:text-green-700">Home</a>
+  <a href="About.html" class="text-green-700 font-bold">About</a>
+  <a href="Gallery.html" class="hover:text-green-700">Gallery</a>
+  <a href="Calculator.html" class="hover:text-green-700">Calculator</a>
+  <a href="Registration.html" class="hover:text-green-700">Registration</a>
+  <a href="Contact.html" class="hover:text-green-700">Contact</a>
+</div>
+
+<script>
+const menuBtn = document.getElementById('menuToggle');
+const mobileMenu = document.getElementById('mobileMenu');
+menuBtn.addEventListener('click', ()=> mobileMenu.classList.toggle('hidden'));
+</script>
+<!-- END NAV -->
+
+<!-- ===================== HERO ===================== -->
+<section class="pt-32 text-center max-w-3xl mx-auto" data-aos="fade-up">
+
+  <img src="ganteng 1234.jpeg" alt="Foto Profil"
+    class="w-40 h-40 rounded-full border-4 border-white shadow-xl mx-auto hover:scale-110 duration-300 object-cover">
+
+  <h1 class="text-5xl font-extrabold mt-4">Kristoper Zamago</h1>
+  <p class="text-green-200 mt-2 text-lg">Mahasiswa Universitas Advent Indonesia • Teknologi Informasi</p>
+
+  <a href="cv.pdf" download class="inline-block mt-6 px-6 py-3 bg-white/30 rounded-full text-green-900 font-bold hover:bg-white shadow transition">
+     ⬇ Download CV
+  </a>
+</section>
+
+<!-- ===================== ABOUT TEXT ===================== -->
+<section class="max-w-4xl mx-auto p-6 text-center mt-14" data-aos="fade-up">
+  <p class="text-green-100 text-lg leading-relaxed">
+    Saya adalah seseorang yang memiliki ketertarikan besar pada teknologi dan dunia digital.
+    Bagi saya, teknologi bukan hanya alat, tetapi peluang untuk menciptakan perubahan dan solusi nyata.
+    Saya senang belajar hal baru, mengeksplorasi ide, dan mengembangkan diri dalam bidang IT.
+  </p>
+</section>
+
+<!-- ===================== SKILL CARDS ===================== -->
+<section class="max-w-5xl mx-auto p-6 mt-12">
+  <h2 class="text-3xl font-bold text-center mb-8">⚡ Skill & Interest</h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div data-aos="zoom-in" class="p-6 bg-white/20 rounded-xl shadow text-center hover:bg-white/30 transition">
+      <h3 class="font-bold text-xl mb-2">🎓 Pendidikan</h3>
+      <p class="text-green-100 text-sm">Integrasi teknologi dalam pembelajaran modern.</p>
+    </div>
+
+    <div data-aos="zoom-in" class="p-6 bg-white/20 rounded-xl shadow text-center hover:bg-white/30 transition">
+      <h3 class="font-bold text-xl mb-2">💻 Teknologi</h3>
+      <p class="text-green-100 text-sm">Web Dev, EdTech, Cybersecurity dasar.</p>
+    </div>
+
+    <div data-aos="zoom-in" class="p-6 bg-white/20 rounded-xl shadow text-center hover:bg-white/30 transition">
+      <h3 class="font-bold text-xl mb-2">📚 Growth Mindset</h3>
+      <p class="text-green-100 text-sm">Selalu belajar & berkembang setiap hari.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== HOBBY SECTION ===================== -->
+<section class="max-w-5xl mx-auto p-6 mt-14">
+  <h2 class="text-3xl font-bold text-center mb-8">✨ Hobi & Minat</h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div data-aos="fade-right" class="p-5 rounded-xl bg-white/15 shadow hover:bg-white/25">
+      <h3 class="font-bold text-lg mb-2">Hobi Saya</h3>
+      <ul class="list-disc ml-5 text-green-100">
+        <li>Sepak bola</li>
+        <li>Travelling dan alam</li>
+        <li>Membaca One Piece</li>
+      </ul>
+    </div>
+
+    <div data-aos="fade-left" class="p-5 rounded-xl bg-white/15 shadow hover:bg-white/25">
+      <h3 class="font-bold text-lg mb-2">Bidang Minat</h3>
+      <ol class="list-decimal ml-5 text-green-100">
+        <li>EdTech</li>
+        <li>Learning Media Digital</li>
+        <li>Cybersecurity</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SOCIAL ===================== -->
+<section class="max-w-4xl mx-auto p-6 text-center mt-16">
+  <h2 class="text-3xl font-bold mb-6">🌐 Temukan Saya</h2>
+  <div class="flex flex-wrap justify-center gap-5">
+    <a class="p-3 w-40 bg-white/30 rounded-xl font-bold hover:bg-white hover:text-green-900 duration-300">Instagram</a>
+    <a class="p-3 w-40 bg-white/30 rounded-xl font-bold hover:bg-white hover:text-green-900 duration-300">GitHub</a>
+    <a class="p-3 w-40 bg-white/30 rounded-xl font-bold hover:bg-white hover:text-green-900 duration-300">LinkedIn</a>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="mt-16 text-center text-green-900 font-semibold py-4 bg-white/20 backdrop-blur shadow-inner">
+  © 2025 Kristoper Zamago — All Rights Reserved
+</footer>
+
+<script>
+AOS.init();
+</script>
+
+</body>
+</html>

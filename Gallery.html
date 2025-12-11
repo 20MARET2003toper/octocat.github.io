@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery - Kristoper Zamago</title>
+
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Animasi AOS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<style>
+body { animation: fadeIn 1s ease-in-out; }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+</style>
+</head>
+<body class="bg-gradient-to-b from-green-900 to-green-200 min-h-screen text-white">
+
+<!-- ===================== NAVBAR ===================== -->
+<nav class="w-full fixed top-0 z-50 bg-white/80 backdrop-blur shadow-md">
+  <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4 text-green-900 font-semibold">
+
+    <h1 class="text-xl font-bold">Kristoper<span class="text-green-600">Zamago</span></h1>
+
+    <ul class="hidden md:flex space-x-8">
+      <li><a href="Home.html" class="hover:text-green-700">Home</a></li>
+      <li><a href="About.html" class="hover:text-green-700">About</a></li>
+      <li><a href="Gallery.html" class="underline text-green-800 font-bold">Gallery</a></li>
+      <li><a href="Calculator.html" class="hover:text-green-700">Calculator</a></li>
+      <li><a href="Registration.html" class="hover:text-green-700">Registration</a></li>
+      <li><a href="Contact.html" class="hover:text-green-700">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HAMBURGER MENU RESPONSIVE -->
+<div class="md:hidden fixed top-4 right-4 z-50">
+<button id="menuToggle" class="text-3xl px-3 py-2 bg-green-700 text-white rounded-lg shadow-lg active:scale-95 transition-all">☰</button>
+</div>
+
+<div id="mobileMenu" class="hidden flex-col items-center space-y-5 bg-white/95 text-green-900 font-semibold py-6 w-full fixed top-16 left-0 shadow-lg backdrop-blur-md md:hidden">
+  <a href="Index.html" class="hover:text-green-700">Home</a>
+  <a href="About.html" class="hover:text-green-700">About</a>
+  <a href="Gallery.html" class="text-green-700 font-bold">Gallery</a>
+  <a href="Calculator.html" class="hover:text-green-700">Calculator</a>
+  <a href="Registration.html" class="hover:text-green-700">Registration</a>
+  <a href="Contact.html" class="hover:text-green-700">Contact</a>
+</div>
+
+<script>
+const menuBtn=document.getElementById('menuToggle');
+const mobileMenu=document.getElementById('mobileMenu');
+menuBtn.addEventListener('click',()=>mobileMenu.classList.toggle('hidden'));
+</script>
+
+<!-- ===================== HEADER TITLE ===================== -->
+<section class="pt-28 text-center" data-aos="fade-down">
+  <h1 class="text-5xl font-extrabold">My <span class="text-green-300">Gallery & Portfolio</span></h1>
+  <p class="mt-3 text-green-100">Beberapa project & karya yang pernah saya buat</p>
+</section>
+
+<!-- ===================== GALLERY ===================== -->
+<section class="max-w-6xl mx-auto p-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7 mt-10">
+  
+  <!-- CARD 1 -->
+  <div data-aos="zoom-in" class="bg-white/20 rounded-xl shadow hover:scale-[1.03] duration-300 overflow-hidden">
+    <img src="ui dash.png" class="w-full h-52 object-cover">
+    <div class="p-4">
+      <h3 class="font-bold text-xl">UI Dashboard</h3>
+      <p class="text-sm text-green-100">Dashboard admin modern menggunakan Tailwind.</p>
+    </div>
+  </div>
+
+  <!-- CARD 2 -->
+  <div data-aos="zoom-in" class="bg-white/20 rounded-xl shadow hover:scale-[1.03] duration-300 overflow-hidden">
+    <img src="website.webp" class="w-full h-52 object-cover">
+    <div class="p-4">
+      <h3 class="font-bold text-xl">Website Landing Page</h3>
+      <p class="text-sm text-green-100">Landing page dengan animasi halus & responsive.</p>
+    </div>
+  </div>
+
+  <!-- CARD 3 -->
+  <div data-aos="zoom-in" class="bg-white/20 rounded-xl shadow hover:scale-[1.03] duration-300 overflow-hidden">
+    <img src="MOBILE UI.jpeg" class="w-full h-52 object-cover">
+    <div class="p-4">
+      <h3 class="font-bold text-xl">Mobile App UI</h3>
+      <p class="text-sm text-green-100">Desain tampilan mobile untuk aplikasi booking.</p>
+    </div>
+  </div>
+
+  <!-- CARD 4 -->
+  <div data-aos="zoom-in" class="bg-white/20 rounded-xl shadow hover:scale-[1.03] duration-300 overflow-hidden">
+    <img src="portfolio card.webp" class="w-full h-52 object-cover">
+    <div class="p-4">
+      <h3 class="font-bold text-xl">Portfolio Card</h3>
+      <p class="text-sm text-green-100">Komponen UI card clean & minimalis.</p>
+    </div>
+  </div>
+
+  <!-- CARD 5 -->
+  <div data-aos="zoom-in" class="bg-white/20 rounded-xl shadow hover:scale-[1.03] duration-300 overflow-hidden">
+    <img src="edtech.jpeg" class="w-full h-52 object-cover">
+    <div class="p-4">
+      <h3 class="font-bold text-xl">EdTech Design</h3>
+      <p class="text-sm text-green-100">UI pendidikan digital berbasis web interaktif.</p>
+    </div>
+  </div>
+
+  <!-- CARD 6 -->
+  <div data-aos="zoom-in" class="bg-white/20 rounded-xl shadow hover:scale-[1.03] duration-300 overflow-hidden">
+    <img src="poster.jpeg" class="w-full h-52 object-cover">
+    <div class="p-4">
+      <h3 class="font-bold text-xl">Poster Event</h3>
+      <p class="text-sm text-green-100">Poster & desain grafis promosi kegiatan.</p>
+    </div>
+  </div>
+
+  <!-- CARD 7 -->
+  <div data-aos="zoom-in" class="bg-white/20 rounded-xl shadow hover:scale-[1.03] duration-300 overflow-hidden">
+    <img src="icon.jpeg" class="w-full h-52 object-cover">
+    <div class="p-4">
+      <h3 class="font-bold text-xl">Icon Illustration</h3>
+      <p class="text-sm text-green-100">Kumpulan icon aset desain kreatif.</p>
+    </div>
+  </div>
+
+  <!-- CARD 8 -->
+  <div data-aos="zoom-in" class="bg-white/20 rounded-xl shadow hover:scale-[1.03] duration-300 overflow-hidden">
+    <img src="mini.png" class="w-full h-52 object-cover">
+    <div class="p-4">
+      <h3 class="font-bold text-xl">Mini Game JS</h3>
+      <p class="text-sm text-green-100">Game berbasis JavaScript DOM sederhana.</p>
+    </div>
+  </div>
+
+  <!-- CARD 9 -->
+  <div data-aos="zoom-in" class="bg-white/20 rounded-xl shadow hover:scale-[1.03] duration-300 overflow-hidden">
+    <img src="UI E.jpeg" class="w-full h-52 object-cover">
+    <div class="p-4">
+      <h3 class="font-bold text-xl">UI E-Commerce</h3>
+      <p class="text-sm text-green-100">Layout toko online modern & minimalis.</p>
+    </div>
+  </div>
+
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="mt-16 text-center text-green-900 font-semibold py-4 bg-white/20 backdrop-blur shadow-inner">
+  © 2025 Kristoper Zamago — Gallery Portfolio
+</footer>
+
+<script>AOS.init();</script>
+</body>
+</html>

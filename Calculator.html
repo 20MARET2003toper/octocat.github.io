@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Calculator — Kristoper Zamago</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS (opsional, untuk konsistensi animasi halaman) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <style>
+    body { background: linear-gradient(180deg,#064e3b,#16a34a 60%); }
+    /* tombol fokus ring lebih jelas */
+    button:focus { outline: none; box-shadow: 0 0 0 3px rgba(16,185,129,0.18); }
+  </style>
+</head>
+<body class="min-h-screen text-white font-sans">
+
+  <!-- NAVBAR (konsisten) -->
+  <nav class="w-full fixed top-0 z-40 bg-white/80 backdrop-blur shadow">
+    <div class="max-w-6xl mx-auto flex items-center justify-between px-6 py-4 text-green-900 font-semibold">
+      <a href="index.html" class="text-xl font-bold">Kristoper<span class="text-green-600">Zamago</span></a>
+
+      <ul class="hidden md:flex space-x-6">
+        <li><a href="Index.html" class="hover:text-green-700">Home</a></li>
+        <li><a href="About.html" class="hover:text-green-700">About</a></li>
+        <li><a href="Gallery.html" class="hover:text-green-700">Gallery</a></li>
+        <li><a href="Calculator.html" class="text-green-900 font-bold">Calculator</a></li>
+        <li><a href="Registration.html" class="hover:text-green-700">Registration</a></li>
+        <li><a href="Contact.html" class="hover:text-green-700">Contact</a></li>
+      </ul>
+
+      <!-- Hamburger -->
+      <button id="menuToggle" class="md:hidden text-3xl p-1 text-green-900">☰</button>
+    </div>
+
+    <!-- Mobile menu (hidden by default) -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white/95 text-green-900 font-semibold text-center py-4">
+      <a class="block py-2" href="Index.html">Home</a>
+      <a class="block py-2" href="About.html">About</a>
+      <a class="block py-2" href="Gallery.html">Gallery</a>
+      <a class="block py-2" href="Calculator.html">Calculator</a>
+      <a class="block py-2" href="Registration.html">Registration</a>
+      <a class="block py-2" href="Contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <!-- PAGE CONTENT -->
+  <main class="pt-28 pb-12 px-4">
+    <section class="max-w-3xl mx-auto text-center mb-8" data-aos="fade-down">
+      <h1 class="text-4xl font-extrabold text-white mb-2">🧮 Calculator</h1>
+      <p class="text-green-100">Kalkulator</p>
+    </section>
+
+    <!-- Calculator Card -->
+    <section class="max-w-sm mx-auto bg-white/10 rounded-2xl p-5 shadow-lg" data-aos="zoom-in">
+      <!-- Display -->
+      <div id="display" class="bg-white/5 text-right rounded px-4 py-3 text-2xl font-mono min-h-[3.2rem] break-words">
+        0
+      </div>
+
+      <!-- Buttons -->
+      <div class="grid grid-cols-4 gap-3 mt-4">
+        <button class="py-3 rounded bg-white/6 hover:bg-white/10" data-action="clear">C</button>
+        <button class="py-3 rounded bg-white/6 hover:bg-white/10" data-action="back">⌫</button>
+        <button class="py-3 rounded bg-white/6 hover:bg-white/10" data-value="%">%</button>
+        <button class="py-3 rounded bg-green-700 hover:bg-green-800" data-value="/">÷</button>
+
+        <button class="py-3 rounded bg-white/6 hover:bg-white/10" data-value="7">7</button>
+        <button class="py-3 rounded bg-white/6 hover:bg-white/10" data-value="8">8</button>
+        <button class="py-3 rounded bg-white/6 hover:bg-white/10" data-value="9">9</button>
+        <button class="py-3 rounded bg-green-700 hover:bg-green-800" data-value="*">×</button>
+
+        <button class="py-3 rounded bg-white/6 hover:bg-white/10" data-value="4">4</button>
+        <button class="py-3 rounded bg-white/6 hover:bg-white/10" data-value="5">5</button>
+        <button class="py-3 rounded bg-white/6 hover:bg-white/10" data-value="6">6</button>
+        <button class="py-3 rounded bg-green-700 hover:bg-green-800" data-value="-">−</button>
+
+        <button class="py-3 rounded bg-white/6 hover:bg-white/10" data-value="1">1</button>
+        <button class="py-3 rounded bg-white/6 hover:bg-white/10" data-value="2">2</button>
+        <button class="py-3 rounded bg-white/6 hover:bg-white/10" data-value="3">3</button>
+        <button class="py-3 rounded bg-green-700 hover:bg-green-800" data-value="+">+</button>
+
+        <button class="col-span-2 py-3 rounded bg-white/6 hover:bg-white/10" data-value="0">0</button>
+        <button class="py-3 rounded bg-white/6 hover:bg-white/10" data-value=".">.</button>
+        <button class="py-3 rounded bg-green-800 hover:bg-green-900" data-action="equals">=</button>
+      </div>
+    </section>
+
+    <!-- Small help text -->
+    <p class="text-center text-green-100 text-sm mt-4 max-w-md mx-auto">Tip: gunakan tombol atau keyboard. Operator: + − × ÷ | % untuk persen.</p>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="text-center py-6 text-green-900 font-semibold bg-white/20 fixed bottom-4 left-1/2 transform -translate-x-1/2 rounded-xl px-6">
+    © 2025 • Kristoper Zamago
+  </footer>
+
+  <!-- SCRIPT: menu + calculator logic -->
+  <script>
+    AOS?.init?.();
+
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuToggle.addEventListener('click', ()=> mobileMenu.classList.toggle('hidden') );
+
+    // Calculator logic (DOM only)
+    (function(){
+      const displayEl = document.getElementById('display');
+      let expr = ''; // internal expression string
+
+      function render(){
+        displayEl.textContent = expr === '' ? '0' : expr;
+      }
+
+      function appendValue(v){
+        // Prevent multiple dots in same number segment
+        if(v === '.'){
+          // find last token after operator
+          const parts = expr.split(/[\+\-\*\/\%]/);
+          const last = parts[parts.length-1];
+          if(last.includes('.')) return;
+          if(last === '') expr += '0';
+        }
+
+        // prevent two operators in a row (except % which is postfix)
+        if(/[+\-*/]/.test(v)){
+          if(expr === '') return; // do not start with operator
+          if(/[+\-*/]$/.test(expr)) {
+            // replace last operator
+            expr = expr.slice(0, -1) + v;
+            render(); return;
+          }
+        }
+
+        expr += v;
+        render();
+      }
+
+      function applyBackspace(){
+        if(expr.length === 0) return;
+        expr = expr.slice(0, -1);
+        render();
+      }
+
+      function clearAll(){
+        expr = '';
+        render();
+      }
+
+      function compute(){
+        if(expr === '') return;
+        // Prepare expression for evaluation:
+        // - Replace '×' & '÷' if any (we used * and / already)
+        // - Convert percentages: replace 'number%' with '(number/100)'
+        // Safety check: allow only digits, operators, parentheses, decimal, percent, spaces
+        const allowed = /^[0-9+\-*/().% ]+$/;
+        // transform percent occurrences: e.g. 50% -> (50/100)
+        const withPercent = expr.replace(/(\d+(\.\d+)?)%/g, '($1/100)');
+
+        // validate
+        if(!allowed.test(withPercent)){
+          displayEl.textContent = 'Error';
+          return;
+        }
+
+        try{
+          // evaluate safely using Function
+          const result = Function('"use strict"; return (' + withPercent + ')')();
+          // Format result: remove trailing .0
+          expr = (Number.isFinite(result) ? String(result) : '');
+          render();
+        } catch(e){
+          displayEl.textContent = 'Error';
+        }
+      }
+
+      // handle button clicks
+      document.querySelectorAll('[data-value]').forEach(btn=>{
+        btn.addEventListener('click', ()=> appendValue(btn.getAttribute('data-value')) );
+      });
+
+      document.querySelectorAll('[data-action]').forEach(btn=>{
+        const action = btn.getAttribute('data-action');
+        btn.addEventListener('click', ()=>{
+          if(action === 'clear') clearAll();
+          else if(action === 'back') applyBackspace();
+          else if(action === 'equals') compute();
+        });
+      });
+
+      // keyboard support
+      window.addEventListener('keydown', (e)=>{
+        const k = e.key;
+        if((/^[0-9]$/).test(k)) appendValue(k);
+        else if(k === '.') appendValue('.');
+        else if(k === '+' || k === '-' || k === '*' || k === '/') appendValue(k);
+        else if(k === 'Backspace') applyBackspace();
+        else if(k === 'Enter' || k === '=') { e.preventDefault(); compute(); }
+        else if(k === '%') appendValue('%');
+        else if(k.toLowerCase() === 'c') clearAll();
+      });
+
+      // initial render
+      render();
+    })();
+  </script>
+</body>
+</html>
